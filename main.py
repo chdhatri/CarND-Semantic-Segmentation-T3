@@ -21,11 +21,9 @@ L2_REG = 1e-5
 KEEP_PROB = 0.5
 LEARNING_RATE = 1e-4
 EPOCHS = 20
-SAFE_MODEL_AFTER_N_EPOCHS = 1   # safes the model after n trained epochs
-BATCH_SIZE = 2                  # 2 for AWS instance 3 GB RAM, 16 for MBP CPU training
-NUM_CLASSES = 2                 # number of segmentation classes (road and non-road)
+BATCH_SIZE = 2
+NUM_CLASSES = 2
 IMAGE_SHAPE = (160, 576)
-IOU_ENABLED = True              # If true, IoU - intersection over union value is determined after each epoch
 
 DATA_DIR = './data'
 RUNS_DIR = './runs'
