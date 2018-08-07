@@ -1,6 +1,33 @@
 # Semantic Segmentation
 ### Introduction
-In this project, you'll label the pixels of a road in images using a Fully Convolutional Network (FCN).
+The goal of this project is to label the pixels of a road in images using a Fully Convolutional Network (FCN) as described in the paper(in classroom) Fully Convolutional Networks for Semantic Segmentation by Jonathan Long, Evan Shelhamer, and Trevor Darrell from UC Berkeley. 
+
+### Architecture
+
+    layer_7_conv_1x1: conv2d(kernel_size=1, strides=1)
+    layer_7_upsampled: conv2d_transpose(kernel_size=4 and strides=2)
+    layer_4_conv_1x1: conv2d(kernel_size=1, strides=1)
+    layer_4_upsampled: conv2d_transpose(kernel_size=4 and strides=2)
+    layer_3_conv_1x1: conv2d(kernel_size=1, strides=1)
+    layer_3_upsampled: conv2d_transpose(kernel_size=16 and strides=8)
+    
+Encoder part downsampling is done using conv2d() and decoder for upsampling conv2d_transpose() has been setup with a kernel initializer (tf.random_normal_initializer) and a kernel regularizer (tf.contrib.layers.l2_regularizer). Upsampling and downsampling are followed by skip connections using tf.add(). 
+
+### Training on AWS EC2 Instance
+The FCN has been trained on an Amazon Web Services (AWS) EC2 g2.2xlarge instance with the following hardware configuration.
+
+Created anaconda environment file environment.yml to setup the EC2 instance with python v3.5.2, tensorflow v1.4 and all dependencies
+
+Prepare Anaconda environment:
+
+     conda env create -f environment.yml
+
+
+### Hyper-Parameters
+Due to the limited storage the batch size was set to 2 and 20 epochs.
+
+### Results
+
 
 ### Setup
 ##### GPU
