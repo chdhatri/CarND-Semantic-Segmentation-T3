@@ -1,4 +1,10 @@
 # Semantic Segmentation
+[Road Expample1]: ./images/um_000019.png
+[Road Expample2]:./images/um_000020.png
+[Road Expample3]:./images/um_000021.png
+[Road Expample4]:./images/um_000022.png
+[Road Expample5]:./images/um_000023.png
+
 ### Introduction
 The goal of this project is to label the pixels of a road in images using a Fully Convolutional Network (FCN) as described in the paper(in classroom) [Fully Convolutional Networks for Semantic Segmentation](https://people.eecs.berkeley.edu/%7Ejonlong/long_shelhamer_fcn.pdf) by Jonathan Long, Evan Shelhamer, and Trevor Darrell from UC Berkeley. 
 
@@ -27,12 +33,11 @@ Prepare Anaconda environment:
 Due to the limited storage the batch size was set to 2 and 20 epochs.
 
 ### Results
-[image_results]: 
-![Road Expample1]: ./images/um_000019.png
-![Road Expample2]:./images/um_000020.png
-![Road Expample3]:./images/um_000021.png
-![Road Expample4]:./images/um_000022.png
-![Road Expample5]:./images/um_000023.png
+![Expample1][Road Expample1]
+![Expample2][Road Expample2]
+![Expample3][Road Expample3]
+![Expample4][Road Expample4]
+![Expample5][Road Expample5]
 
 
 
