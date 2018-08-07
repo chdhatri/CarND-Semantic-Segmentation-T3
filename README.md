@@ -1,6 +1,12 @@
 # Semantic Segmentation
+[Road Expample1]: ./images/um_000019.png
+[Road Expample2]:./images/um_000020.png
+[Road Expample3]:./images/um_000021.png
+[Road Expample4]:./images/um_000022.png
+[Road Expample5]:./images/um_000023.png
+
 ### Introduction
-The goal of this project is to label the pixels of a road in images using a Fully Convolutional Network (FCN) as described in the paper(in classroom) Fully Convolutional Networks for Semantic Segmentation by Jonathan Long, Evan Shelhamer, and Trevor Darrell from UC Berkeley. 
+The goal of this project is to label the pixels of a road in images using a Fully Convolutional Network (FCN) as described in the paper(in classroom) [Fully Convolutional Networks for Semantic Segmentation](https://people.eecs.berkeley.edu/%7Ejonlong/long_shelhamer_fcn.pdf) by Jonathan Long, Evan Shelhamer, and Trevor Darrell from UC Berkeley. 
 
 ### Architecture
 
@@ -14,7 +20,7 @@ The goal of this project is to label the pixels of a road in images using a Full
 Encoder part downsampling is done using conv2d() and decoder for upsampling conv2d_transpose() has been setup with a kernel initializer (tf.random_normal_initializer) and a kernel regularizer (tf.contrib.layers.l2_regularizer). Upsampling and downsampling are followed by skip connections using tf.add(). 
 
 ### Training on AWS EC2 Instance
-The FCN has been trained on an Amazon Web Services (AWS) EC2 g2.2xlarge instance with the following hardware configuration.
+The FCN has been trained on an Amazon Web Services (AWS) EC2 g2.2xlarge instance.
 
 Created anaconda environment file environment.yml to setup the EC2 instance with python v3.5.2, tensorflow v1.4 and all dependencies
 
@@ -27,6 +33,12 @@ Prepare Anaconda environment:
 Due to the limited storage the batch size was set to 2 and 20 epochs.
 
 ### Results
+![Expample1][Road Expample1]
+![Expample2][Road Expample2]
+![Expample3][Road Expample3]
+![Expample4][Road Expample4]
+![Expample5][Road Expample5]
+
 
 
 ### Setup
